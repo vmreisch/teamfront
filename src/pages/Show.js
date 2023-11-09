@@ -19,7 +19,7 @@ const Show = () => {
       <h2>Years Left on Contract: {athlete.years_left_on_contract}</h2>
       <div style={{ textAlign: "center" }}>
         <h2>Update Athlete Details</h2>
-        <Form action={`/athletes/update/${athlete.id}`} method="post">
+        <Form action={`/update/${athlete.id}`} method="post">
           <input type="text" name="name" defaultValue={athlete.name} />
           <input
             type="number"
@@ -35,7 +35,7 @@ const Show = () => {
           />
           <button type="submit">Update Athlete</button>
         </Form>
-        <Form action={`/athletes/delete/${athlete.id}`} method="post">
+        <Form action={`/delete/${athlete.id}`} method="post">
           <button type="submit">Delete Athlete</button>
         </Form>
       </div>
